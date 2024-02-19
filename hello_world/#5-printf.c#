@@ -1,9 +1,7 @@
 #include <stdio.h>
 
-/**
- * main - functions prints string
- * Return: always 0 (Success)
-*/
+/**main- function
+ *return return value*/
 int main(void)
 {
 printf("with proper grammar, but the outcome is a piece of art,");
