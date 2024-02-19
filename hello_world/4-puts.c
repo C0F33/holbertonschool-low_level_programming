@@ -6,8 +6,6 @@ int main(void)
 /**void used*/
 {
 puts("Programming is like building a multilingual puzzle");
-/**return0
- * 
-*/
 return (0);
 }
+
