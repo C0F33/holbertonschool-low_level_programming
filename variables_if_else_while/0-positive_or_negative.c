@@ -1,11 +1,13 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 /* more headers goes there */
 
 /* betty style doc for function main goes there */
 /**
- * main-print if value of n is either positive ngative or equal to zero.
- * return: if succesful return 0.
+ * main- entry point
+ * Desc: print if value of n is either positive ngative or equal to zero.
+ * return: If (success) always return 0.
 */
 int main(void)
 {
