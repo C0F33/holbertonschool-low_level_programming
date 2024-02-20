@@ -7,7 +7,7 @@
 /**
  * main - entry point
  * Desc: print if value of n is either positive ngative or equal to zero.
- * return: If (success) always return 0.
+ * Return: If (success) always return 0.
 */
 int main(void)
 {
