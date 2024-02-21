@@ -4,9 +4,12 @@
  * main - functions prints _putchar
  * Return: always 0 (Success)
 */
-int main(void)
+int altprint(void)
 {
 printf("_putchar\n");
-
+}
+int main(void)
+{
+altprint();
 return (0);
 }
