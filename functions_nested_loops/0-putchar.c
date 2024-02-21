@@ -1,19 +1,23 @@
-#include <stdio.h>
-/**
-* altprint- altprint(void): prints defined string
-* Return: always 0 (Success)
-*/
-int altprint(void)
-{
-printf("_putchar\n");
-}
+#include "main.h"
 
 /**
-* main - entry point
-* Return: always 0 if (success)
-*/
+ * main - entry point
+ * _putchar - writes the character c to output.
+ *
+ *
+ * Return: On success 1.
+ *
+ */
 int main(void)
 {
-altprint();
+_putchar('_');
+_putchar('p');
+_putchar('u');
+_putchar('t');
+_putchar('c');
+_putchar('h');
+_putchar('a');
+_putchar('r');
+_putchar('\n');
 return (0);
 }
