@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc $CFILE -c
+gccbetty 4   $CFILE -c
