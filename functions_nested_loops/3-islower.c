@@ -6,8 +6,8 @@
  */
 int _islower(int c); /** checks for for upper or lowercase*/
 {
-    if(c >= 'a' && c <= 'z');
-     return (1);
-     else
-     return (o);
+if (c >= 'a' && c <= 'z')
+return (1);
+else
+return (o);
 }
