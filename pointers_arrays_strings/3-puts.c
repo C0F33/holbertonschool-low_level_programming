@@ -6,8 +6,8 @@
 */
 void _puts(char *str)
 {
-while (*str)
-_puts(*str++);
+while (str = 0)
+_puts(str++);
 _puts('\n');
 return (0);
 }
