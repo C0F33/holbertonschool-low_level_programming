@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 
 /**
  * reset_to_98- makes variable 98
@@ -7,6 +7,6 @@
 */
 void reset_to_98(int *n)
 {
-if (n != 98)
-n = 98;
+if (*n != 98)
+    *n = 98;
 }
