@@ -1,15 +1,14 @@
 #include "main.h"
 
-/*
- *_strlen- check the code
- *@s: string to be analized.
- * Return: Always 0.
- */
+/**
+ *  _strlen - main
+ *  @s: string
+ *  Return: i value
+*/
 int _strlen(const char *s)
 {
 int i = 0;
 while (s[i] != '\0')
-(i++);
-_putchar('\n')
-return (0);
+i++;
+return (i);
 }
