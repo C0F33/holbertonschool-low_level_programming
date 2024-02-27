@@ -1,7 +1,7 @@
 #include "main.h"
 #include <string.h>
 /**
- * puts2 - prints characters divisible by 2.
+ * puts_half - prints characters divisible by 2.
  * @str: string to print
  * Return: void
  */
