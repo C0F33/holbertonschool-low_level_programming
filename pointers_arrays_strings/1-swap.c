@@ -11,3 +11,16 @@ int temp = *a;
 *a = *b;
 *b = temp;
 }
+#include "main.h"
+
+/**
+ *  _strlen - main
+ *  @s: string
+ *  Return: i value
+*/
+void swap_int(int *a, int *b)
+{
+int temp = *a;
+*a = *b;
+*b = temp;
+}
