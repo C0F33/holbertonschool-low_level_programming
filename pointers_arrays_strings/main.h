@@ -27,3 +27,4 @@ void _puts(char *str);
 void _puts(char *str);
 void rev_string(char *s);
 int _strlen(char *s);
+void puts_half(char *str);
