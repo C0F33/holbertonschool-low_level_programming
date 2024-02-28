@@ -28,3 +28,4 @@ void _puts(char *str);
 void rev_string(char *s);
 int _strlen(char *s);
 void puts_half(char *str);
+char *_strcat(char *dest, char *src);
