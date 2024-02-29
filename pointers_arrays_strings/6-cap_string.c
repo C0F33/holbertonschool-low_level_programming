@@ -1,7 +1,7 @@
  #include "main.h"
  /**
-  *cap_string - foobar
-  * Retun: strn back to user
+  *cap_string - foobar.
+  * Retun: strn back to user.
  */
 char *cap_string(char *str)
 {

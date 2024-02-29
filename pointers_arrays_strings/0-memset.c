@@ -1,9 +1,9 @@
 #include "main.h"
 /**
  * _memset- sets value to
- * @s:string
- * @b:start
- * @n:amount
+ * @s:memery to fill
+ * @b:constant byte
+ * @n:amount of bytes to fill
  * Return: s
 */
 char *_memset(char *s, char b, unsigned int n)
