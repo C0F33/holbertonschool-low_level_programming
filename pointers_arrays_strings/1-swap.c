@@ -15,7 +15,8 @@ int temp = *a;
 
 /**
  *  _strlen - main
- *  @s: string
+ *  @a: string
+ * @
  *  Return: i value
 */
 void swap_int(int *a, int *b)
