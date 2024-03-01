@@ -9,18 +9,19 @@ char *_strstr(char *haystack, char *needle)
 {
 int *NULL = '\0';
 if (*needle == '\0')
-return (char *)haystack;
+return ((char *)haystack);
 while (*haystack != '\0')
 {
 const char *pHaystack = haystack;
 const char *pNeedle = needle;
-while (*pNeedle != '\0' && *pHaystack == *pNeedle) {
+while (*pNeedle != '\0' && *pHaystack == *pNeedle)
+{
 pHaystack++;
 pNeedle++;
 }
 if (*pNeedle == '\0')
-return (char *)haystack;
+return ((char *)haystack);
 haystack++;
 }
-return NULL;
+return (NULL);
 }
