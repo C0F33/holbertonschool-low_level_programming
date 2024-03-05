@@ -8,10 +8,13 @@
 */
 int main(int argc, char *argv[])
 {
+    int a;
+    int b;
+    int product;
 (void) argc;
-int a = atoi(argv[1]);
-int b = atoi(argv[2]);
-int product = (a * b);
-printf("%d,\n", product);
+a = atoi(argv[1]);
+b = atoi(argv[2]);
+product = (a * b);
+printf("%d\n", product);
 return (0);
 }
