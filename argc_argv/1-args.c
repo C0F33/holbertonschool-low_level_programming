@@ -7,9 +7,7 @@
  */
 int main(int argc, char *argv[])
 {
-while (--argc >= 0) {
+while (--argc >= 0)
 printf("%d\n", argc);
+return (0);
 }
-return 0;
-}
-
