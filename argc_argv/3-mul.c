@@ -19,6 +19,6 @@ return (0);
 if (argc != 3)
 {
         printf("Error\n");
-        return 1;
+        return (1);
 }
 }
