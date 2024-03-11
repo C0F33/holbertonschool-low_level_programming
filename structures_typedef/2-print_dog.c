@@ -2,6 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+/**
+ * init_dog - initialize the dog
+ * @d: dog
+ */
 void print_dog(struct dog *d)
 {
 if (d == NULL)
