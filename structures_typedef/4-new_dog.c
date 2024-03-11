@@ -11,9 +11,10 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
+dog_t *p_dog;
 if (!name || !owner)
 return (NULL);
-dog_t *p_dog = malloc(sizeof(dog_t));
+p_dog = malloc(sizeof(dog_t));
 if (!p_dog)
 return (NULL);
 
