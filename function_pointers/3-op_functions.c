@@ -1,52 +1,56 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "3-calc.h"
+
 /**
- * op_add- addition
- * @a: Number to be calculated
- * @b: Number to be calculated
- * Return: Result
-*/
+ * op_add - function does math
+ * @a: int passed
+ * @b: int passed
+ * Return: math
+ */
 int op_add(int a, int b)
 {
 return (a + b);
 }
+
 /**
- * * op_sub- subtraction
- * @a: Number to be calculated
- * @b: Number to be calculated
- * Return: Result
-*/
+ * op_sub - function does math
+ * @a: int passed
+ * @b: int passed
+ * Return: math
+ */
 int op_sub(int a, int b)
 {
 return (a - b);
 }
+
 /**
- * op_mul- multiplication
- * @a: Number to be calculated
- * @b: Number to be calculated
- * Result: product
-*/
+ * op_mul - function does math
+ * @a: int passed
+ * @b: int passed
+ * Return: math
+ */
 int op_mul(int a, int b)
 {
 return (a * b);
 }
+
 /**
- * * op_div- division
- * @a: Number to be calculated
- * @b: Number to be calculated
- * Return: Result
-*/
+ * op_div - function does math
+ * @a: int passed
+ * @b: int passed
+ * Return: math
+ */
 int op_div(int a, int b)
 {
 return (a / b);
 }
+
 /**
- * op_mod- module
- * @a: Number to be calculated
- * @b: Number to be calculated
- * Result: residue
-*/
+ * op_mod - function does math
+ * @a: int passed
+ * @b: int passed
+ * Return: math
+ */
 int op_mod(int a, int b)
 {
 return (a % b);
