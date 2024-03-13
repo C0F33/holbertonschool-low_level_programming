@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * int_index - return index place 
+ * int_index - return index place
  * @array: array
  * @size: size of elements in array
  * @cmp: pointer to function of one of the 3 in main
