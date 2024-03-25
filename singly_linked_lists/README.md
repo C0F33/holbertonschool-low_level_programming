@@ -1,0 +1,1 @@
+This directory contains work with singly linked lists. As usual the work contains functions completing certain tasks with linked lists.
