@@ -1,29 +1,36 @@
-#include <stdlib.h>
 #include "lists.h"
 
-list_t *add_node_beginning(list_t **head, const char *str)
+/**
+* add_node - returns a new link added to list
+* @head: double pointer to the head of a linked list.
+* @str: a string
+* Return: new link
+*/
+list_t *add_node(list_t **head, const char *str)
 {
-    list_t *new_node = malloc(sizeof(list_t));
-    if (new_node == NULL) {
-        return (NULL);
-    }
+char *dup;
+int len;
+list_t *new;
 
-    new_node->str = strdup(str);
-    if (new_node->str == NULL) {
-        free(new_node);
-        return (NULL);
-    }
-    
-    new_node->len = 0;
-    const char *ptr = str;
-    while (*ptr != '\0') {
-        new_node->len++;
-        ptr++;
-    }
+new = malloc(sizeof(list_t));
+if (new == NULL)
+return (NULL);
 
-    new_node->next = *head;
+dup = strdup(str);
+if (dup == NULL)
+{
+free(new);
+return (NULL);
+}
 
-    *head = new_node;
+for (len = 0; str[len];)
+len++;
 
-    return (new_node);
+new->str = dup;
+new->len = len;
+new->next = *head;
+
+*head = new;
+
+return (new);
 }
