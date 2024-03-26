@@ -1,0 +1,2 @@
+This directory focuses on doubly linked lists.
+I will be writing functions that print said lists in theyre entirety, functions that count out how long the list is. Functions that add nodes tot the beginning and end of the list, and much more.
