@@ -1,0 +1,1 @@
+This directory containg execises with binary to unsigned numbers and mathematical operations using this data.
