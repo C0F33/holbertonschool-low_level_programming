@@ -1,5 +1,10 @@
 #include "main.h"
+#include <fcntl.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <errno.h>
 
+#define BUFFER_SIZE 1024
 
 /**
  * print_error - Prints error message to stderr and exits with specified code
@@ -68,11 +73,15 @@ int main(int argc, char *argv[])
 
     if (close(file_from) == -1)
     {
-        print_error(100, "Error: Can't close fd %d\n", file_from);
+        char fd_str[12];
+        sprintf(fd_str, "%d", file_from);
+        print_error(100, "Error: Can't close fd ", fd_str);
     }
     if (close(file_to) == -1)
     {
-        print_error(100, "Error: Can't close fd %d\n", file_to);
+        char fd_str[12];
+        sprintf(fd_str, "%d", file_to);
+        print_error(100, "Error: Can't close fd ", fd_str);
     }
 
     return (0);
