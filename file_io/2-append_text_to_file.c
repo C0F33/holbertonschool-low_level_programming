@@ -1,47 +1,36 @@
 #include "main.h"
+
 /**
-*append_text_to_file - prints text to end of textfile
-*@filename: name of file
-*@text_content: content to be appended
-*Return: 1 of succesful.
-*/
+ * append_text_to_file - Appends text at the end of a file.
+ * @filename: The name of the file.
+ * @text_content: The content to append to the file.
+ *
+ * Return: 1 on success, -1 on failure.
+ */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int file_descriptor;
-	off_t file_size;
-	ssize_t bytes_written;
+int fd, bytes_written, len = 0;
 
-	if (filename == NULL)
+if (filename == NULL)
+return (-1);
+
+if (text_content == NULL)
+return (1);
+
+fd = open(filename, O_WRONLY | O_APPEND);
+if (fd == -1)
+return (-1);
+
+while (text_content[len])
+len++;
+
+bytes_written = write(fd, text_content, len);
+if (bytes_written == -1 || bytes_written != len)
 {
-		return (-1);
-	}
+close(fd);
+return (-1);
+}
 
-	if (text_content == NULL)
-{
-		return (1);
-	}
-
-	file_descriptor = open(filename, O_WRONLY | O_APPEND);
-	if (file_descriptor == -1)
-{
-		return (-1);
-	}
-
-	file_size = lseek(file_descriptor, 0, SEEK_END);
-	if (file_size == -1)
-{
-		close(file_descriptor);
-		return (-1);
-	}
-
-	bytes_written = write(file_descriptor, text_content, strlen(text_content));
-	if (bytes_written == -1 || (size_t)bytes_written != strlen(text_content))
-{
-		close(file_descriptor);
-		return (-1);
-	}
-
-	close(file_descriptor);
-
-	return (1);
+close(fd);
+return (1);
 }

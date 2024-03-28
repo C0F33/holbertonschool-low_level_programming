@@ -1,32 +1,37 @@
 #include "main.h"
+
 /**
-*create_file - creates file even if non existent
-*@filename: char string with file name
-*@text_content: contents of file
-*Return: 1 successfully
-*/
+ * create_file - Creates a file with the specified name and writes the
+ *               provided text content to it.
+ * @filename: The name of the file to create.
+ * @text_content: The content to write to the file.
+ *
+ * Return: 1 on success, -1 on failure.
+ */
 int create_file(const char *filename, char *text_content)
-{int file_descriptor;
-
-    if (filename == NULL)
-        return (-1);
-
-
-		file_descriptor = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
-    if (file_descriptor == -1)
-        return (-1);
-
-    if (text_content != NULL)
 {
-        size_t len = strlen(text_content);
-        if (write(file_descriptor, text_content, len) != (ssize_t)len)
-{
-            close(file_descriptor);
-            return (-1);
-        }
-    }
-    close(file_descriptor);
+int fd, bytes_written, len = 0;
 
-    return (1);
+if (filename == NULL)
+return (-1);
+
+fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+if (fd == -1)
+return (-1);
+
+if (text_content != NULL)
+{
+while (text_content[len])
+len++;
+
+bytes_written = write(fd, text_content, len);
+if (bytes_written == -1 || bytes_written != len)
+{
+close(fd);
+return (-1);
+}
 }
 
+close(fd);
+return (1);
+}
