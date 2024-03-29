@@ -1,18 +1,27 @@
- #include "main.h"
- /**
-  *cap_string - foobar.
-  * Retun: strn back to user.
- */
-char *cap_string(char *str)
+#include "main.h"
+
+/**
+ * cap_string - capitalizes every wordof a string
+ * @s: string to modify
+ * Return: the resulting string
+*/
+char *cap_string(char *s)
 {
-int i;
-while (str[i] != '\0')
+int i, j;
+char spe[13] = {' ', '\t', '\n', ',', ';', '.',
+'!', '?', '"', '(', ')', '{', '}'};
+for (i = 0; s[i] != '\0'; i++)
 {
-if (str[i] >= 'a' && str[i] <= 'z')
+if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
+s[i] -= 32;
+for (j = 0; j < 13; j++)
 {
-str[i] = str[i] - ('a' - 'A');
+if (s[i] == spe[j])
+{
+if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
+s[i + 1] -= 32;
 }
-i++;
 }
-return (str);
+}
+return (s);
 }
